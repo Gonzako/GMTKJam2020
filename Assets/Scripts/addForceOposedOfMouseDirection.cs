@@ -49,7 +49,12 @@ public class addForceOposedOfMouseDirection : MonoBehaviour
     private void FixedUpdate()
     {
         var mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        var forceDir = (transform.position - mousePos).normalized;
+        var forceDir = ((transform.position - mousePos));
+        forceDir.z = 0;
+        forceDir = forceDir.normalized;
+
+        Debug.Log(forceDir.magnitude);
+        Debug.Log(forceDir);
 
         rb.AddForce(forceDir * forceAmount / Time.fixedDeltaTime);
 
