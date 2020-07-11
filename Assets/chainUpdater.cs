@@ -18,13 +18,13 @@ public class chainUpdater : MonoBehaviour
     public Transform parentOfChain;
 
     public List<Transform> blackList;
-
+    public List<Transform> addLast;
     #endregion
 
     #region PrivateFields
 
     LineRenderer lRenderer;
-
+    
     #endregion
 
     #region UnityCallBacks
@@ -48,6 +48,11 @@ public class chainUpdater : MonoBehaviour
         {
             if(!blackList.Contains(parentOfChain.GetChild(i)))
                 list.Add(parentOfChain.GetChild(i).position);
+        }
+
+        for (int i = 0; i < addLast.Count; i++)
+        {
+            list.Add(addLast[i].position);
         }
 
         lRenderer.positionCount = list.Count;
