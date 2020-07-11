@@ -16,7 +16,7 @@ public class addForceOposedOfMouseDirection : MonoBehaviour
     #region PublicFields
 
     public float forceAmount = 10f;
-
+    public bool fixZ = true;
     #endregion
 
     #region PrivateFields
@@ -50,7 +50,7 @@ public class addForceOposedOfMouseDirection : MonoBehaviour
     {
         var mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         var forceDir = ((transform.position - mousePos));
-        forceDir.z = 0;
+        if(fixZ) forceDir.z = 0;
         forceDir = forceDir.normalized;
 
         Debug.Log(forceDir.magnitude);
