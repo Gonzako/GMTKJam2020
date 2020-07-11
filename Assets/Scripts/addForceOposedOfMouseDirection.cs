@@ -51,6 +51,7 @@ public class addForceOposedOfMouseDirection : MonoBehaviour
         var mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         var forceDir = ((transform.position - mousePos));
         if(fixZ) forceDir.z = 0;
+
         forceDir = forceDir.normalized;
 
         Debug.Log(forceDir.magnitude);
