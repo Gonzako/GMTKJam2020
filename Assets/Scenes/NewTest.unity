@@ -1806,6 +1806,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1914101098}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1914101097}
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onTriggerExit:
     m_PersistentCalls:
       m_Calls: []
@@ -1934,6 +1956,18 @@ Rigidbody2D:
 --- !u!50 &1914101096 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1175851712, guid: 9943c717e35f3974386c1a39ddf94e42,
+    type: 3}
+  m_PrefabInstance: {fileID: 1914101092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1914101097 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1405817303479453560, guid: 9943c717e35f3974386c1a39ddf94e42,
+    type: 3}
+  m_PrefabInstance: {fileID: 1914101092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1914101098 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8074853106767554077, guid: 9943c717e35f3974386c1a39ddf94e42,
     type: 3}
   m_PrefabInstance: {fileID: 1914101092}
   m_PrefabAsset: {fileID: 0}
