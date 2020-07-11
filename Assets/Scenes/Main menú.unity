@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -300.11148}
-  m_SizeDelta: {x: 400, y: 600.22296}
+  m_AnchoredPosition: {x: 158.72, y: -359.5}
+  m_SizeDelta: {x: 317.45166, y: 718.99554}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &31632949
 MonoBehaviour:
@@ -212,15 +212,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 5
-    m_Right: 5
-    m_Top: 30
-    m_Bottom: 30
+    m_Left: 30
+    m_Right: 60
+    m_Top: 60
+    m_Bottom: 400
   m_ChildAlignment: 0
   fit: 4
   rows: 3
   columns: 1
-  cellSize: {x: 390, y: 160.07433}
+  cellSize: {x: 227.45166, y: 66.33185}
   spacing: {x: 0, y: 30}
   fitX: 1
   fitY: 1
@@ -235,6 +235,9 @@ GameObject:
   - component: {fileID: 64574570}
   - component: {fileID: 64574572}
   - component: {fileID: 64574571}
+  - component: {fileID: 64574574}
+  - component: {fileID: 64574573}
+  - component: {fileID: 64574575}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -256,10 +259,10 @@ RectTransform:
   m_Father: {fileID: 612209652}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 600, y: -300.11148}
-  m_SizeDelta: {x: 400, y: 600.22296}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -321.3, y: 0.00011826}
+  m_SizeDelta: {x: 642.5044, y: 718.99567}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &64574571
 MonoBehaviour:
@@ -298,6 +301,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 64574569}
   m_CullTransparentMesh: 0
+--- !u!114 &64574573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64574569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73e11fa0edb473468b775fd73a2d23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Intent: 'Restart Scene 6 secs after '
+  onWaitFinished:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 64574575}
+        m_MethodName: restartCurrentScene
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &64574574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64574569}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b725ad88958e0734c805e99d677a8db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 64574573}
+        m_MethodName: delayedCall
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 6
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDisable:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &64574575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64574569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e7b5a89bdfed849bf5377a1b2af32f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &124715559
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1006, y: 252}
+  m_AnchoredPosition: {x: 1006, y: 4}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &586578107
@@ -1126,7 +1197,7 @@ MonoBehaviour:
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
-        Direction: 0
+        Direction: 1
         CustomPosition: {x: 0, y: 0, z: 0}
         EaseType: 0
         Ease: 18
@@ -1406,7 +1477,7 @@ MonoBehaviour:
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Slide
-    PresetName: CardRight
+    PresetName: CardLeft
   ShowProgressor: {fileID: 0}
   TargetOrientation: 2
   UpdateHideProgressorOnShow: 0
@@ -1860,8 +1931,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Slides
+        SoundName: Swoosh
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Slide
@@ -2431,7 +2502,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 960, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -4881,7 +4952,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f03f625cc7127f244a2f4da835b92720, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9398440834d1b014e9832fb05e676ff5, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5005,7 +5076,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -350, y: 300}
   m_SizeDelta: {x: 200, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1058430603
@@ -7556,7 +7627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1110, y: 80}
+  m_AnchoredPosition: {x: -1110, y: -16}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1120525589
@@ -7637,10 +7708,10 @@ MonoBehaviour:
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
-        Direction: 1
+        Direction: 0
         CustomPosition: {x: 0, y: 0, z: 0}
         EaseType: 0
-        Ease: 26
+        Ease: 17
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
@@ -7702,10 +7773,10 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.3
+        Duration: 0.4
       Rotate:
         AnimationType: 2
-        Enabled: 1
+        Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: -15}
         By: {x: 0, y: 0, z: 0}
@@ -7792,7 +7863,7 @@ MonoBehaviour:
         AnimationType: 2
         Enabled: 1
         From: {x: 0, y: 0, z: 0}
-        To: {x: 0.2, y: 0.2, z: 1}
+        To: {x: 0, y: 0, z: 1}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
         Vibrato: 10
@@ -7852,8 +7923,8 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        StartDelay: 0.15
-        Duration: 0.45
+        StartDelay: 0
+        Duration: 0.8
       Fade:
         AnimationType: 2
         Enabled: 0
@@ -7917,7 +7988,7 @@ MonoBehaviour:
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Slide
-    PresetName: BounceToRight
+    PresetName: CardLeft
   HideProgressor: {fileID: 0}
   LoopBehavior:
     Animation:
@@ -8073,7 +8144,7 @@ MonoBehaviour:
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
-        Direction: 1
+        Direction: 0
         CustomPosition: {x: 0, y: 0, z: 0}
         EaseType: 0
         Ease: 18
@@ -8353,7 +8424,7 @@ MonoBehaviour:
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Slide
-    PresetName: CardLeft
+    PresetName: CardRight
   ShowProgressor: {fileID: 0}
   TargetOrientation: 2
   UpdateHideProgressorOnShow: 0
@@ -8654,7 +8725,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -350, y: 300}
   m_SizeDelta: {x: 200, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1285787840

@@ -10,34 +10,35 @@ using UnityEngine;
 /// <summary> Monobeavior class that does something </summary>
 
 
-public class delayedCallback : MonoBehaviour
+public class LoadNextScene : MonoBehaviour
 {
 
-    #region PublicFields
 
-    public string Intent;
-    public UnityEngine.Events.UnityEvent onWaitFinished;
+    #region PublicFields
 
     #endregion
 
     #region PrivateFields
 
+
+
     #endregion
 
     #region UnityCallBacks
-
     private void OnEnable()
     {
-        
+
     }
 
     #endregion
 
     #region PublicMethods
 
-    public void delayedCall(float time)
+    public void loadNextScene(float delay)
     {
-        StartCoroutine(waitedCall(time));
+
+        StartCoroutine(loadNext(delay));
+
     }
 
     #endregion
@@ -45,10 +46,11 @@ public class delayedCallback : MonoBehaviour
 
     #region PrivateMethods
 
-    IEnumerator waitedCall(float time)
+    private IEnumerator loadNext(float timeToWait)
     {
-        yield return new WaitForSeconds(time);
-        onWaitFinished.Invoke();
+        yield return new WaitForSeconds(timeToWait);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex+1,
+            UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
 
     #endregion

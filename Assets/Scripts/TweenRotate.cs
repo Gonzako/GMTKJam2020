@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 /// 
 /// Copyright (c) 2020 All Rights Reserved
@@ -10,13 +11,13 @@ using UnityEngine;
 /// <summary> Monobeavior class that does something </summary>
 
 
-public class delayedCallback : MonoBehaviour
+public class TweenRotate : MonoBehaviour
 {
 
     #region PublicFields
-
-    public string Intent;
-    public UnityEngine.Events.UnityEvent onWaitFinished;
+    [SerializeField]
+    public Vector3 targetRot = Vector3.forward * 45;
+    
 
     #endregion
 
@@ -26,30 +27,36 @@ public class delayedCallback : MonoBehaviour
 
     #region UnityCallBacks
 
-    private void OnEnable()
+    // Start is called before the first frame update
+    void Start()
     {
         
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    void OnEnable()
+    {
+    
     }
 
     #endregion
 
     #region PublicMethods
 
-    public void delayedCall(float time)
+    public void tweenToRotation(float time)
     {
-        StartCoroutine(waitedCall(time));
+        transform.DORotateQuaternion(Quaternion.Euler(targetRot), time);
     }
 
     #endregion
 
 
     #region PrivateMethods
-
-    IEnumerator waitedCall(float time)
-    {
-        yield return new WaitForSeconds(time);
-        onWaitFinished.Invoke();
-    }
 
     #endregion
 }
