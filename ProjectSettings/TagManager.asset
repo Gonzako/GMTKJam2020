@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: PlayerVisuals
+    uniqueID: 2045680785
+    locked: 0
