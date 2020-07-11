@@ -9,21 +9,17 @@ using UnityEngine;
 /// <co-authors>... </co-author>
 /// <summary> Monobeavior class that does something </summary>
 
-    [RequireComponent(typeof(LineRenderer))]
-public class chainUpdater : MonoBehaviour
+
+public class followOtherTransform : MonoBehaviour
 {
 
     #region PublicFields
 
-    public Transform parentOfChain;
-
-    public List<Transform> blackList;
+    public Transform toFollow;
 
     #endregion
 
     #region PrivateFields
-
-    LineRenderer lRenderer;
 
     #endregion
 
@@ -32,26 +28,13 @@ public class chainUpdater : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lRenderer = GetComponent<LineRenderer>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void LateUpdate()
-    {
-        var list = new List<Vector3>();
-        for (int i = 0; i < parentOfChain.childCount; i++)
-        {
-            if(!blackList.Contains(parentOfChain.GetChild(i)))
-                list.Add(parentOfChain.GetChild(i).position);
-        }
-
-        lRenderer.positionCount = list.Count;
-        lRenderer.SetPositions(list.ToArray());
+        transform.position = toFollow.position;
     }
 
     void OnEnable()
