@@ -2,7 +2,7 @@
 using System.Collections;
 #if UNITY_EDITOR
 using UnityEditor;
-#endif
+
 using System.Collections.Generic;
 using System;
 
@@ -12,7 +12,6 @@ using System;
 [CanEditMultipleObjects]
 public class ChainEditor : Editor
 {
-#if UNITY_EDITOR
     Chain t;
     public GUISkin skin;
 
@@ -570,6 +569,7 @@ public class ChainEditor : Editor
         GUILayout.Box("", new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(2) });
     }
 
-#endif
+
 
 }
+#endif
