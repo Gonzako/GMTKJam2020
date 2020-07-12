@@ -9,9 +9,18 @@ EditorBuildSettings:
     path: "Assets/Scenes/Main men\xFA.unity"
     guid: efc27b68a467ee442af51fde9db611ff
   - enabled: 1
-    path: Assets/Scenes/TestGameplay.unity
-    guid: 3d3ad531acbc46d47a0f8547692af06f
+    path: Assets/Scenes/Level1.unity
+    guid: 3a49477040b7f374daebbce5bdb5e7b5
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: Assets/Scenes/Level2.unity
+    guid: 566c047d15753464c95ba549562e3cca
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 2010e8beccb4f9544a08e3a98c195894
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: 256bcadccd03b4844945e09042e310aa
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: 5d7b9c2689c365c4591aab9de0e89340
   m_configObjects: {}
