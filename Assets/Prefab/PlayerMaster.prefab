@@ -416,6 +416,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1443667732206842182}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5873963456351875856}
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onTriggerExit:
     m_PersistentCalls:
       m_Calls: []
@@ -621,6 +643,7 @@ GameObject:
   - component: {fileID: 26285373658815724}
   - component: {fileID: 26285373658815725}
   - component: {fileID: 1914101096}
+  - component: {fileID: 3291913438583994434}
   m_Layer: 9
   m_Name: PlayerLogic
   m_TagString: Untagged
@@ -714,6 +737,18 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 48.04
   m_MaxDistanceOnly: 1
+--- !u!114 &3291913438583994434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26285373658815697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c958f722c8156489367414f83d4659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &137635085987961660
 GameObject:
   m_ObjectHideFlags: 0
