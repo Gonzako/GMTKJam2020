@@ -22,7 +22,7 @@ public class addForceOposedOfMouseDirection : MonoBehaviour
     #region PrivateFields
 
     private Camera cam;
-    private Rigidbody2D rb;
+    private Rigidbody rb;
 
     #endregion
 
@@ -32,7 +32,7 @@ public class addForceOposedOfMouseDirection : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -58,7 +58,8 @@ public class addForceOposedOfMouseDirection : MonoBehaviour
         Debug.Log(forceDir);
 
         rb.AddForce(forceDir * forceAmount / Time.fixedDeltaTime);
-
+        rb.velocity -= Vector3.forward*rb.velocity.z;
+        transform.position -= Vector3.forward * transform.position.z;
     }
 
     #endregion
