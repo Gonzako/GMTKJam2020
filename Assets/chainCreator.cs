@@ -79,6 +79,7 @@ public class chainCreator : MonoBehaviour
         var currentJoint = currentGO.AddComponent<HingeJoint>();
         currentJoint.axis = Vector3.forward;
         currentJoint.anchor = Vector3.left*currCol.bounds.extents.x;
+        currentJoint.enablePreprocessing = false;
 
         for (int i = 1; i < wireSegments; i++)
         {
@@ -96,8 +97,17 @@ public class chainCreator : MonoBehaviour
             newScale.x = distance / (2 * wireSegments);
             newScale.x /= currCol.bounds.extents.x;
             currentGO.transform.localScale = newScale;
-
+            currentJoint = currentGO.AddComponent<HingeJoint>();
+            currentJoint.axis = Vector3.forward;
+            currentJoint.anchor = Vector3.left * currCol.bounds.extents.x;
+            currentJoint.connectedBody = chainList[i - 1].GetComponent<Rigidbody>();
+            currentJoint.enablePreprocessing = false;
         }
+        currentGO = chainList[wireSegments - 1];
+
+        currentJoint = currentGO.AddComponent<HingeJoint>();
+        currentJoint.axis = Vector3.forward;
+        currentJoint.anchor = -Vector3.left * currCol.bounds.extents.x;
 
     }
 
