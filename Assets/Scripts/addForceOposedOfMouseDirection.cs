@@ -54,8 +54,8 @@ public class addForceOposedOfMouseDirection : MonoBehaviour
 
         forceDir = forceDir.normalized;
 
-        Debug.Log(forceDir.magnitude);
-        Debug.Log(forceDir);
+        //Debug.Log(forceDir.magnitude);
+        //Debug.Log(forceDir);
 
         rb.AddForce(forceDir * forceAmount / Time.fixedDeltaTime);
         rb.velocity -= Vector3.forward*rb.velocity.z;

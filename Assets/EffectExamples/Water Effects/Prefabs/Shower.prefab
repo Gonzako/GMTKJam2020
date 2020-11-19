@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4771242407469798}
   - component: {fileID: 198725875636945962}
   - component: {fileID: 199679499128803656}
-  - component: {fileID: 27333006}
   m_Layer: 0
   m_Name: SmallSplash
   m_TagString: Untagged
@@ -4813,19 +4812,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &27333006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266028468812760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26d3be2d60967714e9d1b3116f726df1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetSys: {fileID: 198725875636945962}
 --- !u!1 &1394705897857586
 GameObject:
   m_ObjectHideFlags: 0
@@ -4843,7 +4829,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4158092660125216
 Transform:
   m_ObjectHideFlags: 0
@@ -13406,11 +13392,11 @@ ParticleSystem:
     collisionShape3: {fileID: 0}
     collisionShape4: {fileID: 0}
     collisionShape5: {fileID: 0}
-    inside: 1
+    inside: 0
     outside: 0
-    enter: 0
+    enter: 2
     exit: 0
-    radiusScale: 1
+    radiusScale: 0.5
   SubModule:
     serializedVersion: 2
     enabled: 1

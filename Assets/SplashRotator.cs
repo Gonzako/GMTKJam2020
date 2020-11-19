@@ -19,8 +19,8 @@ public class SplashRotator : MonoBehaviour
 
     #region PrivateFields
     [SerializeField]
-    ParticleSystem targetSys;
-    ParticleSystem partSys;
+    ParticleSystem targetSys = null;
+    ParticleSystem partSys   = null;
     List<ParticleCollisionEvent> partEvents;
     #endregion
 
